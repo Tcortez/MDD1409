@@ -24,8 +24,9 @@
       	1. git config --list
       	
 	  4. Create SSH Keys for Github Access
-      	1. ssh-keygen -t rsa -C ”YourEmail@example.com”
-          *_This will ask if you want to customize the name, you don’t. Just press enter._
+      	1. ssh-keygen -t rsa -C "YourEmail@example.com"
+          1._This will ask if you want to customize the name, you don't. Just press enter._
+          
 		2. Enter a passphrase
 		3. Re-enter the passphrase
 		
@@ -35,7 +36,7 @@
 	  	3. Add new SSH Key to your Github account under the Account Settings.
           1. Click the Add Key button
 		  2. Enter a title defining the server
-		  3. Paste the RSA file’s contents into text area marked “Key”
+		  3. Paste the RSA file's contents into text area marked "Key"
 		  4. Click Add Key
 		  
   3. Create and change to the portfolio directory
