@@ -2,9 +2,11 @@
 ### Cortez_Toby_MDD_1409
 ---
 1. **Set Up Server**
+  ---
   1. SSH Into the Server
     1. ssh root@Server_IP_Address
     2. Enter password
+  ---
   2. Create Non-Root User
     1. adduser Username
     2. adduser Username
