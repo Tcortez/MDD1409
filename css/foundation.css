@@ -36,10 +36,11 @@ html, body {
 
 html,
 body {
-  font-size: 100%; }
+  font-size: 100%; 
+  }
 
 body {
-  background: white;
+  background: rgba(118,140,148,0.2);
   color: #222222;
   padding: 0;
   margin: 0;
