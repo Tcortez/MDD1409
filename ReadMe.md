@@ -25,7 +25,7 @@
       	
 	  4. Create SSH Keys for Github Access
       	1. ssh-keygen -t rsa -C "YourEmail@example.com"
-          1._This will ask if you want to customize the name, you don't. Just press enter._
+          1. _This will ask if you want to customize the name, you don't. Just press enter._
           
 		2. Enter a passphrase
 		3. Re-enter the passphrase
