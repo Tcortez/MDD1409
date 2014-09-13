@@ -69,3 +69,17 @@
 	5. Push to Github
 		1. git push
 		3. enter rsa password
+		
+5. **Create Staging Server**
+  1. Create a directory for repos
+    1. mkdir /var/repos
+  2. Create the repo
+    1. cd /var/repos
+    2. mkdir NameOfSite.git
+  3. Create your Git hooks
+    1. cd NameOfSite.git/hooks
+    2. pico post-receive
+    3. '''#!/bin/sh
+    	  GIT_WORK_TREE=/var/www git checkout -f'''
+    4. save and exit file
+  
