@@ -145,17 +145,21 @@
 	  1. git status
 	  
 	2. Add files to the stage
-		1. git add .
+	  1. git add .
 	
 	3. Check to make sure all were added to the stage
-		1. git status
+	  1. git status
 	
 	4. Make Commit
-		1. git commit -m "Uploaded portfolio"
+      1. git commit -m "TEXT HERE"
 		
-	5. Push to Github
-		1. git push
-		3. enter rsa password
+	5. Push to Staging Server
+	  1. git push stageServer master
+	  2. enter rsa password
+		
+	6. Push to Production Server
+	  1. git push stageServer master
+	  2. enter rsa password
  
 9. ***ALL DONE***
     
