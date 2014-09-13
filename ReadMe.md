@@ -73,13 +73,90 @@
 5. **Create Staging Server**
   1. Create a directory for repos
     1. mkdir /var/repos
+    
   2. Create the repo
     1. cd /var/repos
     2. mkdir NameOfSite.git
-  3. Create your Git hooks
+    
+  3. Change to your repo
+    1. cd NameOfSite.git
+    
+  5. Initialize git
+  	1. git init --bare
+    
+  6. Create your Git hooks
     1. cd NameOfSite.git/hooks
     2. pico post-receive
-    3. '''#!/bin/sh
-    	  GIT_WORK_TREE=/var/www git checkout -f'''
+    3. #!/bin/sh GIT_WORK_TREE=/var/www git checkout -f
     4. save and exit file
+    5. chmod +x post-receive
+    
+6. **Create Production Server**
+  1. Create a directory for repos
+    1. mkdir /var/repos
+    
+  2. Create the repo
+    1. cd /var/repos
+    2. mkdir NameOfSite.git
+    
+  3. Change to your repo
+    1. cd NameOfSite.git
+    
+  5. Initialize git
+  	1. git init --bare
+    
+  6. Create your Git hooks
+    1. cd NameOfSite.git/hooks
+    2. pico post-receive
+    3. #!/bin/sh GIT_WORK_TREE=/var/www git checkout -f
+    4. save and exit file
+    5. chmod +x post-receive
+    
+7. ***Set Up local enviroment***
+  1. Install Git
+    1. sudo apt-get install git-core
+      
+	2. Configure Git
+      1. git config --global user.name YOURNAME
+	  2. git config --global user.email YOUR@EMAIL.COM
+	  
+  2. Make projects directory
+    1. mkdir ~/Projects
+    2. cd ~/Projects
+   
+  3. Create repo directory
+  	1. mkdir NameOfSite.com
+  	2. cd NameOfSite.com
+  
+  4. Initialize git
+    1. git init
+    
+  5. Add remotes to git
+  	1. git add remote stageServer ssh://YourServerUserName@YourSite/var/repos/NameOfSite.git
+  	2. git add remote prodServer ssh://YourServerUserName@YourSite/var/repos/NameOfSite.git 
+  	
+  6. Create a master on the remotes
+  	1. git push stageServer +master:refs/heads/master
+  	2. git push prodServer +master:refs/heads/master
+  	
+8. ***Add commits***
+  1. To add commits and files to your servers
+  	1. view files ready to be staged
+	  1. git status
+	  
+	2. Add files to the stage
+		1. git add .
+	
+	3. Check to make sure all were added to the stage
+		1. git status
+	
+	4. Make Commit
+		1. git commit -m "Uploaded portfolio"
+		
+	5. Push to Github
+		1. git push
+		3. enter rsa password
+ 
+ 9. ***ALL DONE***
+    
   
